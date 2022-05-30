@@ -1,5 +1,5 @@
 {% set name = "intake-sqlite" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/intake-sqlite-{{ version }}.tar.gz
-  sha256: f70f357f0686753ae58e5a0d95007adcb4e2c283a80a13852d103c83470925f7
+  sha256: a2f2a9e1def383f199c6658e541901d80c078a563ebc74a7d40cce1448e11195
 
 build:
   noarch: python
@@ -30,7 +30,6 @@ requirements:
 test:
   imports:
     - intake_sqlite
-    - package_data
   commands:
     - pip check
   requires:
